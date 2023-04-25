@@ -1,24 +1,25 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import './style.scss'
+import hydrogeolLogo from '/hydrogeol-logo.svg';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+  <section class='main-container'>
+    <div class='container'>
+      <div class='logo-container'>
+        <img src='${hydrogeolLogo}' alt='Hydrogeol Logo' />
+        <h1>
+        <span class='stroke-title'>
+          Hydro<br />géologues<br />conseil
+        </span>
+        Hydro<br />géologues<br />conseil</h1>
+      </div>
+      <div class='text-container'>
+        <strong>
+          Encore un peu de patience, nous arrivons bientôt!
+        </strong>
+        <p>
+          En attendant, vous pouvez nous contacter par téléphone au <a href='tel:0247523379'>02 47 52 33 79</a> | <a href='tel:0640510573'>06 40 51 05 73</a> ou par mail à <a href='mailto: contact@hydrogeol.fr'>contact@hydrogeol.fr</a>
+        </p>
+      </div>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
+  </section>
 `
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
